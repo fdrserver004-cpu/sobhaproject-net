@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="author" content="">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="shortcut icon" href="image/favicon.png" type="image/favicon">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Sobha Projects In Gurgaon</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16674150825"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16674150825');
+</script>
+
+
+
+
+   <style>
+      .form-popup-bg {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         display: flex;
+         flex-direction: column;
+         align-content: center;
+         justify-content: center;
+      }
+
+      .form-popup-bg {
+         position: fixed;
+         left: 0;
+         top: 0;
+         height: 100%;
+         width: 100%;
+         background-color: rgba(94, 110, 141, 0.9);
+         opacity: 0;
+         visibility: hidden;
+         -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+         -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+         transition: opacity 0.3s 0s, visibility 0s 0.3s;
+         overflow-y: auto;
+         z-index: 10000;
+      }
+
+      .form-popup-bg.is-visible {
+         opacity: 1;
+         visibility: visible;
+         -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+         -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+         transition: opacity 0.3s 0s, visibility 0s 0s;
+      }
+
+      .form-container {
+         background-color: #fdfdfd;
+         border-radius: 10px;
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         max-width: 466px;
+         margin-left: auto;
+         margin-right: auto;
+         position: relative;
+         padding: 28px;
+         color: #000000;
+      }
+
+      .close-button {
+         color: #000000;
+         width: 40px;
+         height: 40px;
+         position: absolute;
+         top: 18px;
+         right: 12px;
+         border: solid 2px #000000;
+         place-content: center;
+         display: flex;
+         align-items: center;
+         z-index: 99;
+         background-color: transparent;
+      }
+
+      .form-popup-bg:before {
+         content: '';
+         background-color: #000000;
+         opacity: 0.25;
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+      }
+
+      .popup_form {
+         width: 100%;
+         padding: .375rem .75rem;
+         font-size: 1rem;
+         font-weight: 400;
+         line-height: 1.5;
+         background: none;
+         border: 1px solid #000000;
+         outline: none;
+         color: #000000 !important;
+
+      }
+
+      .form-popup-bg .form-control:focus {
+         background: none !important;
+      }
+
+      .form-popup-bg .form-control::placeholder {
+         color: #000000;
+      }
+
+      .b-user-message {
+         position: absolute;
+         left: -5000px;
+         text-indent: 100%;
+         white-space: nowrap;
+         overflow: hidden;
+      }
+   </style>
+
+
+
+
+
+</head>
+
+<body>
+
+
+   
+
+
+
+   <div class="modal fade" id="enquireModal" tabindex="-1" aria-labelledby="enquireModalLabel" aria-hidden="true">
+      <div class="modal-dialog form-container">
+         <div class="modal-content ">
+            <div class="modal-header header_bg_close">
+               <h5 class="modal-title" id="enquireModalLabel">Sobha Projects In Gurgaon</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="row  align-items-center">
+
+
+
+               <div class="col-sm-12 col-sm-12">
+                  <div class="form_text">
+                     <div class="modal-body form_text">
+                        <form class="contact-form form1" method="POST">
+                           <div class=row>
+                              <div class="col-lg-12 form-group mb-2">
+                                 <input autocomplete="off" id="FIRSTNAME" name="FirstName"
+                                    class="form-control popup_form"
+                                    data-error="Name cannot contain digit or special character"
+                                    placeholder="Your Full Name" pattern="[a-zA-Z ]{4,35}" required="">
+                              </div>
+                              <div class="col-lg-12 form-group mb-2">
+                                 <input autocomplete="off" type="email" id="EMAIL" name="EmailAddress"
+                                    class="form-control popup_form"
+                                    data-error="Name cannot contain digit or special character"
+                                    placeholder="Email Address" pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+"
+                                    required="">
+                              </div>
+                              <div class="col-lg-12 form-group mb-2">
+                                 <input autocomplete="off" type="text" id="PHONE" name="Phone"
+                                    class="form-control popup_form" data-error="Phone is required"
+                                    placeholder="Phone/Mobile" required=""
+                                    pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
+                              </div>
+                              <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                                 value="https://www.sobha-noidaprojects.com/gurgoan-platter">
+                              <input type="hidden" name="CLIENT" value="mr-Bhati">
+                              <div class="col-lg-12 form-group">
+                                 <div class=advanced-button>
+                                    <button class="header_phone theme_button form1-submit-btn" id="SubmitQuerytop"
+                                       type=submit>GET CALL BACK</button>
+                                    <input autocomplete="off" id="prog550688" name="mx_Project_Name" maxlength="200"
+                                       type="hidden" value="Sobha Projects In Gurgaon">
+                                    <input autocomplete=off id=LOCATION name=LOCATION maxlength=200 type=hidden
+                                       value="Gurgaon">
+                                    <input autocomplete=off id=TEAM name=TEAM maxlength=200 type=hidden
+                                       value="umikoindia">
+                                    <div class="form-group b-user-message">
+                                       <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                                       <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1" value=""
+                                          autocomplete="off" />
+                                        
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class=form-response></div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+   <!-- ======== gurgaon from ========= -->
+
+
+
+
+   <!-- ===========================btn sticky icon start================================== -->
+   <div class="sticky_icon">
+      <div class="social_icon">
+         <ul class="d-flex">
+            <div class="col-4">
+               <li><a href="tel:+9844299904">Phone</a></li>
+            </div>
+            <div class="col-4">
+               <li><a href="https://api.whatsapp.com/send?phone=+919910111300 &amp;text=Hello, Sobha Projects In Gurgaon Get in touch with me my name is"
+                     target="_blank" class="fixed-Whatsapp">Whatsapp</a></li>
+            </div>
+            <div class="col-4 border-0">
+               <li><a style="cursor: pointer;" class="property-link"
+                     onclick="proprtyForm('Sobha Projects In Gurgaon')">Enquire</a></li>
+            </div>
+         </ul>
+      </div>
+   </div>
+
+
+
+
+
+
+
+
+
+   <!-- modal popup on restart -->
+   <div class="modal fade madal-reload" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close btan_g" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body ">
+
+               <div class="row pt-2 align-items-center">
+
+               </div>
+               <div class="col-sm-12">
+                  <div class="form_modal text-center">
+                     <div class="motal_form_text pb-2">
+                        <h5 class="modal-title" id="exampleModalLabel">Sobha Projects In Gurgaon</h5>
+
+                        <p class="mb-1 pt-2 mb-2 mt-1"><b> Type : </b>Luxury 3, 4 & 5 BHK Apartments
+                        </p>
+
+                     </div>
+                     <form class="contact-form form1" method="POST">
+                        <div class="form_sectionr row text-center justify-content-center">
+
+                           <div class="mb-3 position-relative col-lg-12">
+                              <input autocomplete="off" id="FIRSTNAME" name="FirstName" class="form-control text_form"
+                                 data-error="Name cannot contain digit or special character"
+                                 placeholder="Your Full Name" pattern="[a-zA-Z ]{4,35}" required="">
+                              <span class="icon-inside"><i class="fas fa-user"></i></span>
+                           </div>
+                           <div class="mb-3 position-relative col-lg-12">
+                              <input autocomplete="off" type="email" id="EMAIL" name="EmailAddress"
+                                 class="form-control text_form email-address"
+                                 data-error="Name cannot contain digit or special character" placeholder="Email Address"
+                                 pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+" required="">
+                              <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+                           </div>
+                           <div class="mb-3 position-relative col-lg-12">
+                              <input autocomplete="off" type="text" id="PHONE" name="Phone"
+                                 class="form-control text_form number-only" data-error="Phone is required"
+                                 placeholder="Phone/Mobile" required=""
+                                 pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
+                              <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
+                           </div>
+                           <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                              value="https://www.sobha-noidaprojects.com/gurgoan-platter">
+                           <input type="hidden" name="CLIENT" value="mr-Bhati">
+
+                           <div class="col-lg-12 form-group">
+                              <div class="advanced-button">
+                                 <button class="header_phone theme_button form1-submit-btn" id="SubmitQuerytop"
+                                    type="submit">GET
+                                    CALL BACK</button>
+                                 <input autocomplete="off" id="PROJECT" name="mx_Project_Name" maxlength="200"
+                                    type="hidden" value="Sobha Projects In Gurgaon">
+                                 <input autocomplete=" off" id="LOCATION" name="mx_City" maxlength="200" type="hidden"
+                                    value="Gurgaon">
+                                 <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
+                                    value="umikoindia">
+                                 <div class="form-group b-user-message">
+                                    <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                                    <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1" value=""
+                                       autocomplete="off" />
+                                     
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-response"></div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+
+      </div>
+   </div>
+   <!--  -->
+
+
+
+   <!-- ==============btn scroll section start===================== -->
+   <div class="go-top"> </div>
+   <!-- =====================header sart ======================== -->
+
+   <!-- =========================header close ========================== -->
+   <header class="d-lg-none d-block">
+      <div class="header py-lg-2 py-2 px-lg-5 px-2">
+         <div class="container-xll mx-lg-3 mx-3 header_with">
+            <div class="row align-items-center">
+               <div class="col-lg-2  text-start">
+                  <div class="logo d-flex"> <a class="logo_1" href="#"><img src="image/logo1 (16).png" alt="logo1"
+                           width="130"></a> </div>
+               </div>
+               <div class="col-lg-7">
+                  <div class="menu float-end">
+                     <ul class="d-lg-flex align-items-center">
+                        <li><a class="active hamberger" href="#">Home</a></li>
+                        <li> <a class="hamberger" href="#platter-card">Our Projects</a></li>
+                        <li> <a class="property-link btn-a btnOpenForm"
+                              onclick="proprtyForm('Sobha Property In Gurgaon')">Schedule Site
+                              Visit</a></li>
+                        <li> <a class="hamberger" href="#amenities">Amenities</a></li>
+                        <li> <a class="hamberger" href="#contectus">Contact Us</a></li>
+                     </ul>
+                     <div class="hamberger">
+                        <div class="mobilemenu"> </div>
+                     </div>
+
+                  </div>
+
+               </div>
+
+               <div class="col-lg-3">
+                  <div class="contect-us float-end " style="float: right !important;">
+                     <div class="d-flex ">
+                        <ul class="d-flex me-2 align-items-center">
+                           <li class="me-3"><a href="tel:+91-9844299904"><i class="fa fa-phone"
+                                    aria-hidden="true"></i></a>
+                           </li>
+                           <li> <a href="tel:+91-9844299904"><span>+91-9844299904</span></a> </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+
+
+
+
+
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <header class="d-lg-block d-none">
+      <div class="header py-lg-2 py-2 px-lg-5 px-2">
+         <div class="container-xll mx-lg-3 mx-3 header_with">
+            <div class="row align-items-center">
+
+
+
+
+
+               <div class="col-lg-12 justify-content-center align-items-center d-flex text-center">
+                  <div class="logo d-flex"> <a class="logo_1" href="#"><img src="image/logo1 (16).png" alt="logo1"
+                           width="150"></a> </div>
+               </div>
+
+
+
+
+
+
+
+
+            </div>
+         </div>
+      </div>
+
+   </header>
+
+
+
+   <div class="left-sticky-header py-lg-1 py-1 px-2 d-none d-lg-block">
+      <div class="container-xll mx-lg-3 mx-3 left-header-inner">
+         <div class="row align-items-center">
+
+
+
+            <div class="col-lg-12">
+               <div class="menu">
+
+                  <ul class="d-lg-flex align-items-center">
+                     <li><a class="hamberger" href="#contectus">Contact Us</a></li>
+                     <li><a class="hamberger" href="#platter-card">Our Projects</a></li>
+
+                     <li><a class="hamberger" href="#amenities">Amenities</a></li>
+                     <li><a class="active hamberger" href="#">Home</a></li>
+
+                  </ul>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <style>
+      /* ==========================
+   LEFT STICKY SIDEBAR HEADER
+========================== */
+      /* ===============================
+   LEFT STICKY SIDEBAR HEADER
+================================ */
+      /* ===============================
+   LEFT STICKY SIDEBAR HEADER
+================================ */
+
+      .left-sticky-header {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 75px;
+         height: 100vh;
+         background: #fff;
+         z-index: 9999;
+         box-shadow: rgba(14, 42, 34, 0.57);
+      }
+
+      body {
+         margin-left: 75px;
+      }
+
+
+      /* ===============================
+   BOOTSTRAP OVERRIDE
+================================ */
+
+      .left-sticky-header .row {
+         display: flex !important;
+         flex-direction: column !important;
+         margin: 0 !important;
+      }
+
+      .left-sticky-header [class*="col-"] {
+         width: 100% !important;
+         max-width: 100% !important;
+         padding: 0 !important;
+      }
+
+      /* ===============================
+   CONTACT SECTION
+================================ */
+
+
+      .left-sticky-header .contect-us a,
+      .left-sticky-header .contect-us span,
+      .left-sticky-header .contect-us i {
+         color: #ffffff;
+         font-size: 14px;
+      }
+
+      /* ===============================
+   LOGO
+================================ */
+
+
+      /* ===============================
+   MENU CONTAINER
+================================ */
+
+      .left-sticky-header .menu {
+         width: 100%;
+         padding: 10px 0;
+      }
+
+      .left-sticky-header .menu ul {
+         display: flex !important;
+         flex-direction: column !important;
+         align-items: center;
+         padding: 0;
+         margin: 0;
+      }
+
+      .left-sticky-header .menu ul li {
+         list-style: none;
+         margin: 20px 0;
+      }
+
+      /* ===============================
+   MENU TEXT – PURE VERTICAL
+================================ */
+
+      .left-sticky-header .menu ul li a {
+         writing-mode: vertical-rl;
+         transform: rotate(180deg);
+         white-space: nowrap;
+         color: #0e2a22;
+         text-decoration: none;
+         font-size: 14px;
+         letter-spacing: 3px;
+         text-transform: uppercase;
+         border-radius: 6px;
+         transition: all 0.3s ease;
+         font-weight: 500;
+      }
+
+
+      /* Button style */
+      .left-sticky-header .btn-a {
+         background: #ffb703;
+         color: #000 !important;
+         font-weight: 600;
+      }
+
+      /* ===============================
+   MOBILE RESPONSIVE FIX
+================================ */
+
+      @media (max-width: 991px) {
+
+         .left-sticky-header {
+            position: relative;
+            width: 100%;
+            height: auto;
+         }
+
+         body {
+            margin-left: 0;
+         }
+
+         .left-sticky-header .row {
+            flex-direction: row !important;
+         }
+
+         .left-sticky-header .menu ul {
+            flex-direction: row !important;
+            flex-wrap: wrap;
+         }
+
+         .left-sticky-header .menu ul li a {
+            writing-mode: horizontal-tb;
+            transform: none;
+            letter-spacing: 1px;
+            padding: 8px 12px;
+         }
+      }
+   </style>
+
+   <!-- =========================header close ========================== -->
+
+   <!-- =========================header close ========================== -->
+   <div class="banner_bg">
+      <div class="banner">
+         <div class="banner_img">
+            <div class="img_banner">
+               <img src="image/banner_bg.png" width="100%" alt="banner_bg">
+            </div>
+
+            <div class="banner_text mx-md-3">
+               <div class="container-fluid  ">
+                  <div class="row align-items-center">
+
+                     <div class="col-lg-7 d-flex">
+                        <div class="banner_wrapper_text">
+                           <div class="banner-text">
+                              <h1 class="banner-name">Sobha Projects In Gurgaon</h1>
+                              <!-- <h2 class="banner-type ">Premium Retail Space & Office Spaces</h2> -->
+
+
+                              <div class="banner-highlight my-3">
+                                 <p class=""><i class="fa-solid fa-check"></i>Right at the heart of the Township
+                                 </p>
+                                 <p class=""><i class="fa-solid fa-check"></i>24*7 Security</p>
+                                 <p class=""><i class="fa-solid fa-check"></i>Luxury 3, 4 & 5 BHK APARTMENTS
+
+                                 </p>
+                              </div>
+
+
+                              <h3 class="banner-price primary-bg"> <span class="me-2"> Starting Price : </span> 2.2 Cr* Onwards
+                              </h3>
+
+                           </div>
+                        </div>
+                     </div>
+
+
+                     <div class="col-lg-5 mb-mobile mb-mobile col-md-5 d-none d-md-block">
+
+                        <div class="Banner-form  float-end">
+                           <form class="contact-form form1" method="POST">
+                              <div class="form_section text-center">
+                                 <h3 class="form_title mb-2">Schedule A Site Visit</h3>
+                                 <p class="mb-4">Please fill out the form below, our expert will get back to you soon.
+                                 </p>
+                                 <div class="mb-3 position-relative">
+                                    <input autocomplete="off" id="FIRSTNAME" name="FirstName"
+                                       class="form-control text_form"
+                                       data-error="Name cannot contain digit or special character"
+                                       placeholder="Your Full Name" pattern="[a-zA-Z ]{4,35}" required="">
+                                    <span class="icon-inside"><i class="fas fa-user"></i></span>
+                                 </div>
+                                 <div class="mb-3 position-relative">
+                                    <input autocomplete="off" type="email" id="EMAIL" name="EmailAddress"
+                                       class="form-control text_form email-address"
+                                       data-error="Name cannot contain digit or special character"
+                                       placeholder="Email Address" pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+"
+                                       required="">
+                                    <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+                                 </div>
+                                 <div class="mb-3 position-relative">
+                                    <input autocomplete="off" type="text" id="PHONE" name="Phone"
+                                       class="form-control text_form number-only" data-error="Phone is required"
+                                       placeholder="Phone/Mobile" required=""
+                                       pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
+                                    <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
+                                 </div>
+                                 <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                                    value="https://www.sobha-noidaprojects.com/gurgoan-platter">
+                                 <input type="hidden" name="CLIENT" value="mr-Bhati">
+
+                                 <div class="col-lg-12 form-group">
+                                    <div class="advanced-button">
+                                       <button class="header_phone theme_button form1-submit-btn" id="SubmitQuerytop"
+                                          type="submit">GET
+                                          CALL BACK</button>
+                                       <input autocomplete="off" id="PROJECT" name="mx_Project_Name" maxlength="200"
+                                          type="hidden" value="Sobha Projects In Gurgaon">
+                                       <input autocomplete=" off" id="LOCATION" name="mx_City" maxlength="200"
+                                          type="hidden" value="Gurgaon">
+                                       <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
+                                          value="umikoindia">
+                                       <div class="form-group b-user-message">
+                                          <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                                          <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1"
+                                             value="" autocomplete="off" />
+
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="form-response"></div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+
+
+
+
+
+                  </div>
+               </div>
+            </div>
+
+
+         </div>
+      </div>
+
+
+   </div>
+
+
+   <style>
+      .banner-text {
+         position: relative;
+         max-width: 550px;
+         color: white;
+      }
+
+      /* Your existing text styles remain unchanged */
+      .banner-address {
+         position: relative;
+         font-size: 18px;
+      }
+
+
+      .banner-address::before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 21%;
+         width: 3.5rem;
+         border: 1px solid #fff;
+      }
+
+      .banner-address::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         right: 21%;
+         width: 3.5rem;
+         border: 1px solid #fff;
+      }
+
+      .banner-name {
+         font-size: 2rem;
+         margin: 5px 0px;
+      }
+
+      .primary-bg {
+         border: 1px solid #fff;
+         margin: .8rem 0rem;
+         font-weight: 500;
+         width: fit-content;
+         padding: 8px 8px 8px 0;
+      }
+
+      .primary-bg span {
+         background: #0e2a22;
+         padding: 8px;
+         color: #fff;
+         letter-spacing: 2.1px;
+      }
+
+
+      .banner-type {
+         font-size: 1.5rem;
+         font-weight: 700;
+         color: #fff !important;
+         margin-bottom: 15px;
+         position: relative;
+         letter-spacing: 1px;
+      }
+
+      .banner-highlight p {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         padding: 4px 9px;
+         margin-bottom: 12px;
+         border-radius: 6px;
+         font-weight: 500;
+         font-size: 16px;
+         color: #ffffff;
+         transform: skew(-8deg);
+         border: 1px solid #ffffff;
+         letter-spacing: 1.1px;
+         width: fit-content;
+      }
+
+      .banner-highlight p * {
+         transform: skew(8deg);
+      }
+
+      .banner-highlight p i {
+         background: #ffffff;
+         color: #0e2a22;
+         padding: 8px;
+         border-radius: 4px;
+      }
+
+
+
+      @media(max-width:768px) {
+         .banner_bg {
+            background-color: #fff;
+         }
+
+         .banner-name {
+            font-size: 25px;
+         }
+
+         .banner-address,
+         .banner-type {
+            color: #000 !important;
+         }
+
+         .banner-type {
+            font-size: 18px !important;
+            font-weight: normal;
+            border-bottom: 1px solid #0e2a22;
+            padding-bottom: 8px;
+         }
+
+         .banner-address::before {
+            border: 1px solid #000000;
+            left: 11%;
+            width: 2.5rem;
+         }
+
+         .banner-address::after {
+            border: 1px solid #000000;
+            right: 11%;
+            width: 2.5rem;
+         }
+
+         .banner .banner_wrapper_text h3 {
+            font-size: 19px;
+            color: #313131;
+            border: 1px solid #7d7d7d;
+            border-radius: 5px;
+            padding: 5px 10px !important;
+            background: transparent;
+            margin: 0.2rem 0rem 1rem;
+         }
+
+      }
+   </style>
+
+   <!-- banner section closed -->
+   <div class="form_bottom m-3">
+      <div class="col-lg-4 mb-mobile col-md-5 d-block d-md-none">
+         <div class="Banner-form-mb">
+            <form class="contact-form form1" method="POST">
+               <div class="form_section">
+                  <div class="form_text text-center">
+                     <h3 class="form_title mb-3"> Schedule A Site Visit </h3>
+                     <p class="mb-3 text-dark">Please fill out the form below, our expert will get back to you soon.
+                     </p>
+                  </div>
+                  <div class="mb-3 position-relative">
+                     <input autocomplete="off" id="FIRSTNAME" name="FirstName" class="form-control text_form"
+                        data-error="Name cannot contain digit or special character" placeholder="Your Full Name"
+                        pattern="[a-zA-Z ]{4,35}" required="">
+                     <span class="icon-inside"><i class="fas fa-user"></i></span>
+                  </div>
+                  <div class="mb-3 position-relative">
+                     <input autocomplete="off" type="email" id="EMAIL" name="EmailAddress"
+                        class="form-control text_form email-address"
+                        data-error="Name cannot contain digit or special character" placeholder="Email Address"
+                        pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+" required="">
+                     <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+                  </div>
+                  <div class="mb-3 position-relative">
+                     <input autocomplete="off" type="text" id="PHONE" name="Phone"
+                        class="form-control text_form number-only" data-error="Phone is required"
+                        placeholder="Phone/Mobile" required=""
+                        pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
+                     <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
+                  </div>
+                  <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                     value="https://www.sobha-noidaprojects.com/gurgoan-platter">
+                  <input type="hidden" name="CLIENT" value="mr-Bhati">
+
+                  <div class="col-lg-12 form-group">
+                     <div class="advanced-button">
+                        <button class="header_phone theme_button form1-submit-btn" id="SubmitQuerytop" type="submit">GET
+                           CALL BACK</button>
+                        <input autocomplete="off" id="PROJECT" name="mx_Project_Name" maxlength="200" type="hidden"
+                           value="Sobha Projects In Gurgaon">
+                        <input autocomplete=" off" id="LOCATION" name="mx_City" maxlength="200" type="hidden"
+                           value="Gurgaon">
+                        <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
+                           value="umikoindia">
+                        <div class="form-group b-user-message">
+                           <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                           <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1" value=""
+                              autocomplete="off" />  
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-response"></div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!-- <section class="banner__ mt-lg-4">
+      <a style="cursor: pointer;" class="property-link btn-a btnOpenForm" onclick="proprtyForm('Godrej Parkshire')"><img
+            src="image/banner_bottom.png" alt="banner" class="w-100"></a>
+   </section> -->
+
+
+   <section id="platter-card" class="card-section">
+
+      <div class="container">
+
+         <div class="my-3 my-lg-4 d-flex justify-content-center">
+            <div class="platter-hed text-center mb-3">
+               <h2>Sobha Projects In Gurgaon
+               </h2>
+               <h6 class="text-dark">
+                  Find your dream home from our Premium Properties</h6>
+            </div>
+         </div>
+         <div class="row ">
+
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+               <div class="property-card">
+
+                  <!-- TITLE -->
+                  <h5 class="property-title">
+                     Sobha Aranya
+                     <span class="arrow-icon">↗</span>
+                  </h5>
+
+                  <!-- IMAGE -->
+                  <div class="property-img">
+                     <img src="image/Sobha Aranya.png" alt="Property Image">
+                     <span class="location-badge">At Karma Lakelands, Sec-80 Gurgaon</span>
+                  </div>
+
+                  <!-- PRICE -->
+                  <div class="price-row d-flex justify-content-between align-items-center">
+                     <span class="start-text">Starts At</span>
+                     <span class="price-text">₹ 7.44 Cr* Onwards</span>
+                  </div>
+
+                  <hr>
+
+                  <!-- DETAILS -->
+                  <div class="property-info">
+                     <div class="info-row">
+                        <span>Type</span>
+                        <strong>Premium 3 & 4 BHK Apartments</strong>
+                     </div>
+
+                     <div class="info-row">
+                        <span>Size</span>
+                        <strong>2836 - 4285 Sqft</strong>
+                     </div>
+                  </div>
+
+                  <hr>
+
+                  <!-- HIGHLIGHTS -->
+                  <div class="property-highlights mt-3">
+                     <ul>
+                        <li>Clubhouse - 75000sft G+2 Stories </li>
+                        <li>Total Area: 31.28 acres</li>
+                     </ul>
+                  </div>
+
+                  <!-- BUTTONS -->
+
+                  <div class="d-flex gap-3 mt-4">
+                     <button class="btn btn-interested card-btn-custom w-100" onclick="proprtyForm('Sobha Aranya')">View
+                        Details</button>
+                  </div>
+
+               </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+               <div class="property-card">
+
+                  <!-- TITLE -->
+                  <h5 class="property-title">Sobha Strada
+                     <span class="arrow-icon">↗</span>
+                  </h5>
+
+                  <!-- IMAGE -->
+                  <div class="property-img">
+                     <img src="image/Sobha Strada.png" alt="Property Image">
+                     <span class="location-badge">At Sector 106 Gurgaon</span>
+                  </div>
+
+                  <!-- PRICE -->
+                  <div class="price-row d-flex justify-content-between align-items-center">
+                     <span class="start-text">Starts At</span>
+                     <span class="price-text">₹ 2.2 Cr* Onwards</span>
+                  </div>
+
+                  <hr>
+
+                  <!-- DETAILS -->
+                  <div class="property-info">
+                     <div class="info-row">
+                        <span>Type</span>
+                        <strong>Retail shops and Studio Apartments </strong>
+                     </div>
+
+                     <div class="info-row">
+                        <span>Size</span>
+                        <strong>On Request</strong>
+                     </div>
+                  </div>
+
+                  <hr>
+
+                  <!-- HIGHLIGHTS -->
+                  <div class="property-highlights mt-3">
+                     <ul>
+                        <li> SOBHA's 1st Commercial Project in Delhi NCR!
+                        </li>
+                        <li> Land Area: 2.03 acres</li>
+                     </ul>
+                  </div>
+
+                  <!-- BUTTONS -->
+                  <div class="d-flex gap-3 mt-4">
+                     <button class="btn btn-interested card-btn-custom w-100" onclick="proprtyForm('Sobha Strada')">View
+                        Details</button>
+                  </div>
+
+               </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+               <div class="property-card">
+
+                  <!-- TITLE -->
+                  <h5 class="property-title">Sobha Sector 63A
+                     <span class="arrow-icon">↗</span>
+                  </h5>
+
+                  <!-- IMAGE -->
+                  <div class="property-img">
+                     <img src="image/Sobha Sector 63A.png" alt="Property Image">
+                     <span class="location-badge">At Golf Course Extension Road, Gurgaon</span>
+                  </div>
+
+                  <!-- PRICE -->
+                  <div class="price-row d-flex justify-content-between align-items-center">
+                     <span class="start-text">Starts At</span>
+                     <span class="price-text">₹ On Request </span>
+                  </div>
+
+                  <hr>
+
+                  <!-- DETAILS -->
+                  <div class="property-info">
+                     <div class="info-row">
+                        <span>Type</span>
+                        <strong>3,4 & 4.5 BHK</strong>
+                     </div>
+
+                     <div class="info-row">
+                        <span>Size</span>
+                        <strong>On Request </strong>
+                     </div>
+                  </div>
+
+                  <hr>
+
+                  <!-- HIGHLIGHTS -->
+                  <div class="property-highlights mt-3">
+                     <ul>
+                        <li>Total Floors : Coming Soon</li>
+                        <li>Special Early Bird Discounts</li>
+                     </ul>
+                  </div>
+
+                  <!-- BUTTONS -->
+                  <div class="d-flex gap-3 mt-4">
+                     <button class="btn btn-interested card-btn-custom w-100"
+                        onclick="proprtyForm('Sobha Sector 63A')">View
+                        Details</button>
+                  </div>
+
+               </div>
+
+            </div>
+
+
+   <div class="col-lg-4 col-md-6 mb-4">
+
+               <div class="property-card">
+
+                  <!-- TITLE -->
+                  <h5 class="property-title">Sobha Altus
+                     <span class="arrow-icon">↗</span>
+                  </h5>
+
+                  <!-- IMAGE -->
+                  <div class="property-img">
+                     <img src="image/Sobha Altus.png" alt="Property Image">
+                     <span class="location-badge">At Sector 106 Gurgaon</span>
+                  </div>
+
+                  <!-- PRICE -->
+                  <div class="price-row d-flex justify-content-between align-items-center">
+                     <span class="start-text">Starts At</span>
+                     <span class="price-text">₹ 6.5 Cr* Onwards</span>
+                  </div>
+
+                  <hr>
+
+                  <!-- DETAILS -->
+                  <div class="property-info">
+                     <div class="info-row">
+                        <span>Type</span>
+                        <strong>Luxury 4 & 5 BHK Apartment</strong>
+                     </div>
+
+                     <div class="info-row">
+                        <span>Size</span>
+                        <strong>2870 – 3853 Sq.Ft.</strong>
+                     </div>
+                  </div>
+
+                  <hr>
+
+                  <!-- HIGHLIGHTS -->
+                  <div class="property-highlights mt-3">
+                     <ul>
+                        <li> Flexible Payment Plan*
+                        </li>
+                        <li>Unveilling The New Tower</li>
+                     </ul>
+                  </div>
+
+                  <!-- BUTTONS -->
+                  <div class="d-flex gap-3 mt-4">
+                     <button class="btn btn-interested card-btn-custom w-100" onclick="proprtyForm('Sobha Altus')">View
+                        Details</button>
+                  </div>
+
+               </div>
+
+            </div>
+
+
+         </div>
+      </div>
+
+   </section>
+
+   <style>
+      .card-section {
+         padding: 50px 0 90px 0;
+      }
+
+      .card-section h2 {
+         font-size: 28x;
+         margin-bottom: 12px;
+      }
+
+
+      .property-card {
+         background: #e8e8e8;
+         border-radius: 18px;
+         padding: 20px;
+         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+         border: 1px solid #0e2a22
+      }
+
+      .property-title {
+         font-weight: 600;
+         font-size: 18px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 15px;
+      }
+
+      .arrow-icon {
+         background: #0e2a22;
+         color: #fff;
+         font-size: 14px;
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .property-img {
+         position: relative;
+         overflow: hidden;
+         border-radius: 14px;
+      }
+
+      .property-img img {
+         width: 100%;
+         height: 180px;
+         object-fit: cover;
+      }
+
+      .location-badge {
+         position: absolute;
+         bottom: 15px;
+         left: 15px;
+         background: #fff;
+         padding: 6px 14px;
+         border-radius: 30px;
+         font-size: 13px;
+         font-weight: 500;
+      }
+
+      .price-row {
+         margin-top: 20px;
+      }
+
+      .start-text {
+         color: #0e2a22;
+         font-size: 14px;
+      }
+
+      .price-text {
+         font-size: 20px;
+         font-weight: 600;
+      }
+
+      .property-info .info-row {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 10px;
+         font-size: 14px;
+      }
+
+      .property-info span {
+         color: #0e2a22;
+      }
+
+      .property-info strong {
+         font-weight: 600;
+         text-align: right;
+      }
+
+      .property-highlights ul {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+      }
+
+      .property-highlights li {
+         position: relative;
+         padding-left: 22px;
+         font-size: 14px;
+         color: #444;
+         margin-bottom: 8px;
+      }
+
+      .property-highlights li::before {
+         content: "✔";
+         position: absolute;
+         left: 0;
+         top: 0;
+         color: #0e2a22;
+         font-weight: 600;
+      }
+
+      .btn-interested {
+         background: #0e2a22;
+         color: #fff;
+         border-radius: 10px;
+         padding: 12px;
+         font-weight: 600;
+      }
+
+      .btn-interested:hover {
+         background: #9e7c3c;
+         color: #fff;
+      }
+
+      .btn-details {
+         background: #2f2f2f;
+         color: #fff;
+         border-radius: 10px;
+         padding: 12px;
+         font-weight: 600;
+      }
+
+      .btn-details:hover {
+         background: #000;
+         color: #fff;
+      }
+   </style>
+
+
+
+
+   <section class="luxury-section text-center">
+      <div class="container">
+
+         <h2>Sobha Projects In Gurgaon </h2>
+
+         <p>
+            Sobha Group is set to introduce a premium residential development in Gurgaon, crafted for discerning
+            homebuyers and investors seeking luxury apartments with excellent connectivity, contemporary amenities, and
+            strong long-term value growth. Strategically positioned along Golf Course Extension Road, this upcoming
+            project
+         </p>
+
+         <div class="row g-4">
+
+            <div class="col-lg-4 col-6">
+               <div class="info-card">
+                  <p>Ultra-luxury residences with premium craftsmanship and elegant design</p>
+               </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+               <div class="info-card">
+                  <p>Prime Gurgaon location with excellent road and metro connectivity</p>
+               </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+               <div class="info-card">
+                  <p>Sobha’s signature quality construction and superior finishing standards</p>
+               </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+               <div class="info-card">
+                  <p>World-class amenities including clubhouse, pool, and wellness spaces</p>
+               </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+               <div class="info-card">
+                  <p>High investment potential with strong rental and capital appreciation</p>
+               </div>
+            </div>
+
+            <div class="col-lg-4 col-6">
+               <div class="info-card">
+                  <p>Spacious layouts with panoramic views and abundant natural light</p>
+               </div>
+            </div>
+
+         </div>
+         <button class="know-more-btn mt-4" onclick="proprtyForm('Sobha Projects In Gurgaon ')">👉 View
+            Details</button>
+
+      </div>
+   </section>
+
+
+   <!--  -->
+
+
+   <section class="gallery-section" id="gallery_jump">
+      <div class="container">
+         <div class="text-center">
+            <h2 class="gallery-title">Lifestyle Gallery</h2>
+            <p class="my-2 mb-3 col-lg-10">Sobha Group is set to introduce a premium residential development in Gurgaon
+            </p>
+         </div>
+
+         <!-- EXTERIOR -->
+         <div class="gallery-grid tab-content active" id="exterior">
+            <img src="image/gallery.png" alt="" data-aos="zoom-in" class="aos-init aos-animate">
+            <img src="image/gallery1.png" alt="" data-aos="zoom-in" class="aos-init aos-animate">
+            <img src="image/gallery2.png" alt="" data-aos="zoom-in" class="aos-init aos-animate">
+            <img src="image/gallery3.png" alt="" data-aos="zoom-in" class="aos-init">
+            <img src="image/gallery4.png" alt="" data-aos="zoom-in" class="aos-init">
+            <img src="image/gallery5.png" alt="" data-aos="zoom-in" class="aos-init">
+         </div>
+
+
+   </section>
+
+
+   <!--  -->
+
+   <section id="amenities" class="py-5">
+      <div class="container-fluid px-lg-5">
+
+         <div class="row align-items-center">
+            <!-- Left Text -->
+            <div class="col-lg-5 mb-4 mb-lg-0">
+               <div class="amenities-text text-center">
+                  <h2 class="fw-bold mb-3">Features & Amenities</h2>
+                  <p class="mb-4 text-white">Discover world-class amenities designed to enhance your lifestyle </p>
+                  <div class="my-3">
+                     <button class="btn-brochure" data-bs-toggle="modal" data-bs-target="#exampleModal">Download
+                        Brochure</button>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Right Carousel -->
+            <div class="col-lg-7">
+               <div class="owl-carousel amenities-carousel owl-theme">
+                  <div class="item text-center">
+                     <div class="amenity-img">
+                        <img src="image/amenities_1.png" alt="Fire Alarm">
+                     </div>
+                     <h5>Fire Alarm</h5>
+                  </div>
+                  <div class="item text-center">
+                     <div class="amenity-img">
+                        <img src="image/amenities_2.png" alt="EV Charging">
+                     </div>
+                     <h5>EV Charging</h5>
+                  </div>
+                  <div class="item text-center">
+                     <div class="amenity-img">
+                        <img src="image/amenities_3.png" alt="CCTV Surveillance">
+                     </div>
+                     <h5>CCTV Surveillance</h5>
+                  </div>
+                  <div class="item text-center">
+                     <div class="amenity-img">
+                        <img src="image/amenities-4.png" alt="Parking">
+                     </div>
+                     <h5>Parking</h5>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+   <style>
+      #amenities {
+         padding: 4rem 0rem;
+         /* background-image: url("image/wood.webp"); */
+         background-color: #0e2a22;
+         color: #fff;
+         position: relative;
+      }
+
+      /* #amenities::before{
+   content: "";
+   position: absolute;
+   width: 50%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   background-color: #FFFEEE;
+   z-index: 1;
+} */
+      .left-animationimage {
+         position: absolute;
+         z-index: 2;
+         top: 5%;
+         left: 3%;
+         background-image: url('image/leaf-vector.png');
+         width: 20rem;
+         height: 20rem;
+         background-size: contain;
+         background-repeat: no-repeat;
+         animation: floatUpDown 4s ease-in-out infinite;
+      }
+
+
+      @keyframes floatUpDown {
+
+         0%,
+         100% {
+            transform: translateY(0);
+         }
+
+         50% {
+            transform: translateY(-20px);
+         }
+      }
+
+
+
+
+      .amenities-text h2 {
+         font-size: 2rem;
+         font-weight: 800;
+         color: #dddddd;
+         margin: 1rem 0rem;
+         line-height: 3rem;
+      }
+
+      .amenities-carousel .item {
+         background-color: #ffffff;
+         border-radius: 12px;
+         padding: 10px;
+      }
+
+      .amenities-text p {
+         color: #ffffff !important;
+         font-size: 1rem;
+         line-height: 1.6;
+      }
+
+      .btn-brochure {
+         background: #ffffff;
+         color: #0e2a22;
+         border: none;
+         padding: 16px 28px;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: 0.3s ease;
+      }
+
+      .btn-brochure:hover {
+         background: #684831;
+         transform: scale(1.05);
+      }
+
+      .amenity-img {
+         overflow: hidden;
+         border-radius: 12px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+         margin-bottom: 1rem;
+      }
+
+      .amenity-img img {
+         width: 100%;
+         height: 300px;
+         object-fit: cover;
+         transition: transform 0.5s ease;
+      }
+
+      .amenity-img:hover img {
+         transform: scale(1.1);
+      }
+
+      .amenities-carousel h5 {
+         font-weight: 600;
+         color: #333;
+      }
+
+      .owl-dots {
+         margin-top: 15px;
+      }
+
+      .owl-dot span {
+         width: 12px;
+         height: 12px;
+         background: #d4af37;
+         opacity: 0.5;
+         transition: all 0.3s ease;
+      }
+
+      .owl-dot.active span {
+         opacity: 1;
+         transform: scale(1.2);
+      }
+
+      @media (max-width: 768px) {
+         .amenities-text {
+            text-align: center;
+         }
+
+         .btn-brochure {
+            width: 100%;
+         }
+
+         .amenities-text h2 {
+            margin: 0;
+            line-height: 1rem;
+         }
+
+         .left-animationimage {
+            display: none;
+         }
+
+         .amenity-img img {
+            height: 250px;
+         }
+      }
+   </style>
+
+
+
+
+
+
+
+
+
+   <!-- end -->
+   <!-- =========== amenities section start =============== -->
+
+
+   <footer>
+      <div class="footer_bg" id="contectus">
+         <div class="footer">
+            <div class="container">
+               <!-- <div class="col-lg-12 text-center mb-5"> <img src="image/logo1.png" width="150" alt=""> </div> -->
+               <div class="row">
+                  <div class="col-lg-7 col-md-6 mb-5">
+                     <div class="footer_contant">
+                        <h3>About Developer</h3>
+                        <p class="mb-3 mt-3 col-lg-11">The Sobha Group is one of India's most esteemed real estate
+                           developers, renowned for its commitment to delivering high-quality residential and commercial
+                           projects. Established in 1995, the company has consistently set new benchmarks in the
+                           industry with its emphasis on precision, innovative designs, and uncompromising standards of
+                           construction. Sobha's portfolio spans across luxury apartments, villas, and plotted
+                           developments, each reflecting the company's dedication to craftsmanship and customer
+                           satisfaction. With a presence in multiple cities across India, Sobha has earned a reputation
+                           for timely project delivery and transparency, making it a trusted name among homebuyers and
+                           investors alike. Their projects are synonymous with luxury, comfort, and long-term value,
+                           catering to the needs of modern urban dwellers.
+                        </p>
+
+
+                        <div class="contact_us mt-5">
+                           <ul class="d-flex align-items-center">
+                              <li><a href="tel:+91-9844299904">
+                                    <i class="fa-solid fa-phone-volume"></i></a>
+                              </li>
+                              <li class="ms-3">
+                                 <p class="pb-1">Call Us Anytime</p> <a
+                                    href="tel:+91-9844299904"><span>+91-9844299904</span></a>
+                              </li>
+                           </ul>
+
+                        </div>
+
+
+                     </div>
+                  </div>
+
+
+
+
+
+                  <div class="col-lg-5  col-md-6 mb-4">
+                     <div class="contect-form">
+                        <form class="contact-form form1" method="POST">
+                           <div class="form_section">
+                              <h3 class="form_title mb-3">Schedule A Site Visit</h3>
+                              <div class="mb-4 position-relative">
+                                 <input autocomplete="off" id="FIRSTNAME" name="FirstName"
+                                    class="form-control text_form"
+                                    data-error="Name cannot contain digit or special character"
+                                    placeholder="Your Full Name" pattern="[a-zA-Z ]{4,35}" required="">
+                                 <span class="icon-inside"><i class="fas fa-user"></i></span>
+                              </div>
+                              <div class="mb-4 position-relative">
+                                 <input autocomplete="off" type="email" id="EMAIL" name="EmailAddress"
+                                    class="form-control text_form email-address"
+                                    data-error="Name cannot contain digit or special character"
+                                    placeholder="Email Address" pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+"
+                                    required="">
+                                 <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+                              </div>
+                              <div class="mb-4 position-relative">
+                                 <input autocomplete="off" type="text" id="PHONE" name="Phone"
+                                    class="form-control text_form number-only" data-error="Phone is required"
+                                    placeholder="Phone/Mobile" required=""
+                                    pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
+                                 <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
+                              </div>
+                              <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                                 value="https://www.sobha-noidaprojects.com/gurgoan-platter">
+                              <input type="hidden" name="CLIENT" value="mr-Bhati">
+
+                              <div class="col-lg-12 form-group">
+                                 <div class="advanced-button">
+                                    <button class="header_phone theme_button form1-submit-btn" id="SubmitQuerytop"
+                                       type="submit">GET
+                                       CALL BACK</button>
+                                    <input autocomplete="off" id="PROJECT" name="mx_Project_Name" maxlength="200"
+                                       type="hidden" value="Sobha Projects In Gurgaon">
+                                    <input autocomplete=" off" id="LOCATION" name="mx_City" maxlength="200"
+                                       type="hidden" value="Gurgaon">
+                                    <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
+                                       value="umikoindia">
+                                    <div class="form-group b-user-message">
+                                       <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                                       <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1" value=""
+                                          autocomplete="off" />
+                                        
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-response"></div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="footer_b mt-5">
+                  <div class="col-sm-12 text-center box">
+                     <p class="col-lg-11 information-web"><b> Disclaimer:</b> The content is for information purposes
+                        only and does not constitute an offer to avail of any service. Prices mentioned are subject to
+                        change without notice and properties mentioned are subject to availability. Images for
+                        representation purposes only. This website is belong to authorized marketing partner.
+                     </p>
+                     <div class="mt-3">
+
+                        <h4 style="font-size: 14px; color: #000000;" class="mt-2 lh-lg">Agent Rera : UPRERAAGT23971 |
+                           Projects Rera - Sobha Aranya : RC/REP/HARERA/GGM/808/540/2024/35 | Sobha Strada :
+                           RC/REP/HARERA/GGM/1010/742/2025/113| Sobha Sector 63A : Coming Soon
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer-bootom">
+         <ul class="footermenu">
+            <li>
+               <p style="text-align: center;"><strong><a href="disclaimer.html" target="_blank"><span
+                           style="color: #0e2a22;">Privacy Policy</span></a>&nbsp;|&nbsp;<a href="disclaimer.html"
+                        target="_blank"><span style="color: #000000;"></span></a> Digital Media Planned 
+                     <a style="color: #0e2a22;" href="http://www.umikoweb.com/" target="_blank">by Umiko Web</a> </strong> </p>
+            </li>
+         </ul>
+      </div>
+   </footer>
+
+
+
+   <!-- ===============footer section start========================== -->
+
+
+
+
+   <script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+      integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="js/popper/popper.min.js"></script>
+   <script src="js/bootstrap/bootstrap.min.js"></script>
+
+   <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+   <script src="js/jquery.appear.js"></script>
+   <script src="js/counter/jquery.countTo.js"></script>
+   <script src="js/select2/select2.full.js"></script>
+   <script src="js/range-slider/ion.rangeSlider.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+   <script src="js/jarallax/jarallax.min.js"></script>
+   <script src="js/jarallax/jarallax-video.min.js"></script>
+   <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script> -->
+   <script src="js/main_js.js"></script>
+   <script src="js/custom.js"></script>
+
+   <script>
+
+      document.querySelectorAll('.form1').forEach(form => {
+         form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const btn = form.querySelector('.form1-submit-btn');
+            btn.disabled = true;
+            btn.innerText = 'Submitting...';
+
+            const formData = new FormData(form);
+
+            fetch('send_mail.php', {
+               method: 'POST',
+               body: formData
+            })
+               .then(r => r.json())
+               .then(() => {
+                  window.location.href = 'thank-you.html';
+               })
+               .catch(() => {
+                  window.location.href = 'thank-you.html';
+               });
+         });
+      });
+
+
+
+      function proprtyForm(titlehoem) {
+         $('#prog550688').val(titlehoem);
+         $('#enquireModalLabel').text(titlehoem);
+         $('#enquireModal').modal('show');
+      }
+
+
+      $(document).ready(function () {
+         setTimeout(() => {
+            $('#newlaunchModal').modal('show')
+         }, 1000);
+      })
+
+
+      $('.amenities-carousel').owlCarousel({
+         items: 2,
+         loop: true,
+         autoplay: true,
+         autoplayTimeout: 2500,
+         smartSpeed: 900,
+         dots: true,
+         nav: false,
+         margin: 20,
+         responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            1200: { items: 3 }
+         }
+      });
+
+
+
+   </script>
+
+
+</body>
+
+</html>
